@@ -12,7 +12,18 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+// routes/web.php
+
+use App\Http\Controllers\YourController;
+
+Route::get('/parallax', [YourController::class, 'showParallax']);
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+// routes/web.php
+
+use App\Http\Controllers\VideoController;
+
+Route::get('/video', [VideoController::class, 'showFullScreenVideo']);
